@@ -1,0 +1,27 @@
+@import '../variables';
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 25px;
+
+  &__login-button,
+  &__signup-button {
+    font-size: 16px;
+    font-weight: 600;
+    color: $white-color;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__login-button {
+    border-radius: 50px;
+    padding: 13px 40px;
+    background: $primary-gradient;
+  }
+
+  &__signup-button {
+    background: transparent;
+  }
+}

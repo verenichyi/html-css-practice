@@ -1,0 +1,14 @@
+@import "../variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  &__text {
+    font-size: 2em;
+    font-weight: 200;
+    color: $white-color;
+  }
+}

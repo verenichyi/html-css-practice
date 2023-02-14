@@ -1,0 +1,34 @@
+@import '../variables';
+@import '../components/menu';
+@import '../components/logo';
+@import '../components/weather';
+@import '../components/auth';
+
+.header {
+  min-height: 100vh;
+  background-color: $primary-color;
+  background-image: url('assets/images/header/main-pic.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__inner {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  &__weather {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    &__weather {
+      display: flex;
+    }
+  }
+}
