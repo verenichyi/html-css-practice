@@ -1,6 +1,7 @@
 @import '../variables';
 
 .menu {
+  z-index: 2;
   &_active {
     &:before {
       content: '';

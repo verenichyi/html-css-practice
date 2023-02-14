@@ -3,6 +3,8 @@
 @import '../components/logo';
 @import '../components/weather';
 @import '../components/auth';
+@import '../components/search-form';
+@import '../components/search';
 
 .header {
   min-height: 100vh;
@@ -11,6 +13,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-bottom: 25px;
 
   &__inner {
     padding: 2em 0;
@@ -23,12 +26,47 @@
   &__weather {
     display: none;
   }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .header {
+    padding-bottom: 50px;
+
     &__weather {
       display: flex;
     }
   }
 }
+
+@media screen and (min-width: 700px) {
+  .header {
+    padding-bottom: 205px;
+
+    &__title {
+      line-height: 70px;
+      font-size: 56px;
+      max-width: 390px;
+      margin-top: 130px;
+      margin-bottom: 45px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding-bottom: 205px;
+
+    &__title {
+      max-width: 410px;
+      margin-bottom: 110px;
+      line-height: 65px;
+    }
+  }
+}
+
