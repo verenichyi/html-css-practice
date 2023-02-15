@@ -1,0 +1,26 @@
+@import '../variables';
+
+.search-from {
+  &__filter {
+    overflow-x: hidden;
+  }
+
+  &__filter-list {
+    display: flex;
+    padding: 15px 0;
+  }
+
+  &__filter-item {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    flex-shrink: 0;
+    color: $primary-text-color;
+    font-size: 16px;
+    padding: 5px 15px;
+    background-color: $white-color;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
