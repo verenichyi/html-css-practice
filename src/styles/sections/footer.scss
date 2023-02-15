@@ -95,6 +95,12 @@
 
 @media screen and (min-width: 480px) {
   .footer {
+    &__description {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
     &__offer {
       flex-direction: row;
       width: initial;
@@ -111,10 +117,7 @@
   .footer {
     &__description {
       padding: 80px 0;
-      flex-direction: row;
-      justify-content: space-between;
       gap: 32px;
-      flex-wrap: wrap;
     }
 
     &__description-item {
