@@ -1,0 +1,17 @@
+@import '../variables';
+
+.weather {
+  align-items: center;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__divider {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: $white-color;
+    margin: 0 5px;
+  }
+}

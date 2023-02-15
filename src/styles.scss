@@ -1,7 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "styles/reset";
+@import "styles/global";
+@import "styles/fonts";
 
-/* WRITE YOUR CODE BELOW */
+@import "styles/sections/header";
