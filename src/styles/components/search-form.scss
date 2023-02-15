@@ -7,14 +7,12 @@
 
   &__filter-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     padding: 15px 0;
   }
 
   &__filter-item {
-    &:not(:last-child) {
-      margin-right: 5px;
-    }
-
     flex-shrink: 0;
     color: $primary-text-color;
     font-size: 16px;
@@ -22,5 +20,10 @@
     background-color: $white-color;
     border-radius: 50px;
     cursor: pointer;
+    transition: color 0.3s ease;
+
+    &_active {
+      color: $primary-color;
+    }
   }
 }

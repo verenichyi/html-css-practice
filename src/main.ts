@@ -13,3 +13,17 @@ if (menuButton) {
     menu.classList.toggle('menu_active');
   });
 }
+
+const filterItems = document.querySelectorAll('.search-from__filter-item');
+
+const clearActiveClasses = () => {
+  filterItems.forEach(item => item.classList.remove('search-from__filter-item_active'));
+};
+
+filterItems.forEach(item => {
+  item.addEventListener('click', () => {
+    clearActiveClasses();
+
+    item.classList.add('search-from__filter-item_active');
+  });
+});
