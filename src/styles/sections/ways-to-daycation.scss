@@ -56,6 +56,75 @@
     cursor: pointer;
   }
 
+  &__popular-card {
+    position: relative;
+    padding: 30px 25px 25px;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: $white-color;
+  }
+
+  &__popular-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+    & img {
+      width: 250px;
+    }
+  }
+  &__popular-card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    color: $primary-text-color;
+  }
+
+  &__popular-card-tag {
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: 12px;
+  }
+
+  &__popular-card-title {
+    flex-grow: 1;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+  &__popular-card-button {
+    cursor: pointer;
+    padding: 20px 28px;
+    border: none;
+    border-radius: 50px;
+    background: $primary-gradient;
+    color: $white-color;
+    font-weight: 700;
+    transition: color 0.2s ease, background 0.5s ease;
+
+    &:hover {
+      padding: 18px 26px;
+      border: 2px solid $primary-color;
+      background: transparent;
+      color: $primary-color;
+    }
+  }
+
   &__card {
     position: relative;
     padding: 20px 25px;
@@ -109,6 +178,43 @@
     }
   }
 
+  &__gold-card {
+    padding: 35px 25px 20px;
+    position: relative;
+    height: 100%;
+    color: $primary-text-color;
+    border-radius: 6px;
+    background-color: $white-color;
+    overflow: hidden;
+  }
+
+  &__gold-card-feature {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    padding: 0 15px 15px 0;
+    background: $primary-gradient;
+    border-radius: 100px 0 6px 0;
+  }
+
+  &__gold-card-title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__gold-card-info {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   //&__cabanas,
   //&__spa-passes,
   //&__daybeds,
@@ -147,6 +253,15 @@
       }
     }
 
+    &__popular-card {
+      padding: 50px 20px 35px 40px;
+    }
+
+    &__popular-card-title {
+      font-size: 49px;
+      line-height: 61px;
+    }
+
     &__card-name {
       font-size: 24px;
       line-height: 30px;
@@ -159,6 +274,16 @@
       & span {
         font-size: 24px;
       }
+    }
+
+    &__gold-card {
+      padding: 50px 60px 20px 40px;
+    }
+
+    &__gold-card-title {
+      font-size: 36px;
+      line-height: 45px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -182,6 +307,15 @@
       &:nth-child(6) {
         display: block;
       }
+    }
+
+    &__popular-card-title {
+      font-size: 68px;
+      line-height: 78px;
+    }
+
+    &__gold-card {
+      padding: 40px 60px 20px 40px;
     }
   }
 }
