@@ -1,0 +1,98 @@
+@import '../variables';
+
+.ways-to-daycation {
+  &__most-popular {
+    grid-area: most-popular;
+  }
+  &__cabanas {
+    grid-area: cabanas;
+  }
+  &__spa-passes {
+    grid-area: spa-passes;
+  }
+  &__daybeds {
+    grid-area: daybeds;
+  }
+  &__fitness {
+    grid-area: fitness;
+  }
+  &__events {
+    grid-area: events;
+  }
+  &__gold-pass {
+    grid-area: gold-pass;
+  }
+}
+
+.ways-to-daycation {
+  &__grid-container {
+  }
+
+  &__grid_item {
+    background-color: $primary-color;
+    height: 200px;
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: none;
+    }
+
+    &:first-child {
+      height: 400px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ways-to-daycation {
+    &__grid-container {
+      display: grid;
+      grid-template-areas:
+        'most-popular cabanas'
+        'most-popular spa-passes'
+        'daybeds gold-pass';
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 1fr;
+      grid-gap: 30px;
+    }
+
+    &__grid_item {
+      min-height: 200px;
+      height: auto;
+
+      &:first-child {
+        height: auto;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ways-to-daycation {
+    &__grid-container {
+      display: grid;
+      grid-template-areas:
+        'most-popular cabanas spa-passes'
+        'most-popular daybeds fitness'
+        'most-popular events gold-pass';
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 4fr 3fr 3fr;
+    }
+
+    &__grid_item {
+      &:nth-child(5),
+      &:nth-child(6) {
+        display: block;
+      }
+    }
+  }
+}
