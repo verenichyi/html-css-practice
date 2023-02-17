@@ -16,6 +16,12 @@
   &__fitness {
     grid-area: fitness;
   }
+  &__beach {
+    grid-area: beach;
+  }
+  &__pool-beach {
+    grid-area: pool-beach;
+  }
   &__events {
     grid-area: events;
   }
@@ -35,8 +41,8 @@
     border-radius: 6px;
     height: 200px;
 
-    &:nth-child(5),
-    &:nth-child(6) {
+    &:nth-child(7),
+    &:nth-child(8) {
       display: none;
     }
 
@@ -214,14 +220,6 @@
     font-size: 16px;
     line-height: 22px;
   }
-
-  //&__cabanas,
-  //&__spa-passes,
-  //&__daybeds,
-  //&__fitness,
-  //&__events {
-  //
-  //}
 }
 
 @media screen and (min-width: 768px) {
@@ -233,9 +231,9 @@
       grid-template-areas:
         'most-popular cabanas'
         'most-popular spa-passes'
-        'daybeds gold-pass';
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+        'daybeds fitness'
+        'beach pool-beach'
+        'events gold-pass';
       grid-auto-rows: 1fr;
       grid-gap: 30px;
     }
@@ -246,6 +244,11 @@
 
       &:first-child {
         height: auto;
+      }
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        display: block;
       }
 
       &:not(:last-child) {
@@ -297,16 +300,10 @@
       grid-template-areas:
         'most-popular cabanas spa-passes'
         'most-popular daybeds fitness'
-        'most-popular events gold-pass';
+        'most-popular beach pool-beach'
+        'events events gold-pass';
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    &__grid_item {
-      &:nth-child(5),
-      &:nth-child(6) {
-        display: block;
-      }
     }
 
     &__popular-card-title {
