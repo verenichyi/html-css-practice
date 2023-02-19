@@ -7,13 +7,7 @@
 @import '../components/search';
 
 .header {
-  min-height: 100vh;
   background-color: $primary-color;
-  background-image: url('assets/images/header/main-pic.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 25px;
 
   &__inner {
     padding: 2em 0;
@@ -32,21 +26,34 @@
     font-weight: 700;
     margin-bottom: 24px;
   }
+
+  &__main-section {
+    padding-bottom: 25px;
+  }
+}
+
+.background-container {
+  background-image: url('assets/images/header/main-pic.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (min-width: 480px) {
   .header {
-    padding-bottom: 50px;
 
     &__weather {
       display: flex;
+    }
+
+    &__main-section {
+      padding-bottom: 50px;
     }
   }
 }
 
 @media screen and (min-width: 700px) {
   .header {
-    padding-bottom: 205px;
 
     &__title {
       line-height: 70px;
@@ -55,12 +62,15 @@
       margin-top: 130px;
       margin-bottom: 45px;
     }
+
+    &__main-section {
+      padding-bottom: 205px;
+    }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .header {
-    padding-bottom: 205px;
 
     &__title {
       max-width: 410px;

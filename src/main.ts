@@ -15,6 +15,19 @@ if (menuButton) {
   });
 }
 
+const filterItems = document.querySelectorAll('.search-from__filter-item');
+
+const clearActiveClasses = () => {
+  filterItems.forEach(item => item.classList.remove('search-from__filter-item_active'));
+};
+
+filterItems.forEach(item => {
+  item.addEventListener('click', () => {
+    clearActiveClasses();
+
+    item.classList.add('search-from__filter-item_active');
+  });
+
 // Slider
 const carousel = document.querySelector('.slider__carousel');
 const slideImg = carousel.querySelectorAll('img')[0];
