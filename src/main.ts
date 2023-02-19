@@ -27,6 +27,7 @@ filterItems.forEach(item => {
 
     item.classList.add('search-from__filter-item_active');
   });
+});
 
 // Slider
 const carousel = document.querySelector('.slider__carousel');
