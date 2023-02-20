@@ -131,29 +131,9 @@ class NavSlider {
 
   constructor() {
     this.init = this.init.bind(this);
-    this.autoSlide = this.autoSlide.bind(this);
     this.dragStart = this.dragStart.bind(this);
     this.dragging = this.dragging.bind(this);
     this.dragStop = this.dragStop.bind(this);
-    this.addListeners = this.addListeners.bind(this);
-  }
-
-  autoSlide() {
-    if (
-      this.carousel.scrollLeft - (this.carousel.scrollWidth - this.carousel.clientWidth) > -1 ||
-      carousel.scrollLeft <= 0
-    )
-      return;
-
-    this.positionDiff = Math.abs(this.positionDiff);
-
-    const valDifference = this.imageWidthWithGap - this.positionDiff;
-
-    if (carousel.scrollLeft > this.prevScrollLeft) {
-      this.carousel.scrollLeft += this.positionDiff > this.imageWidthWithGap / 3 ? valDifference : -this.positionDiff;
-    }
-
-    this.carousel.scrollLeft -= this.positionDiff > this.imageWidthWithGap / 3 ? valDifference : -this.positionDiff;
   }
 
   dragStart(event: MouseEvent | TouchEvent) {
@@ -199,10 +179,9 @@ class NavSlider {
     if (!this.isDragging) return;
 
     this.isDragging = false;
-    this.autoSlide();
   }
 
-  addListeners() {
+  init() {
     this.arrows.forEach(arrow => {
       arrow.addEventListener('click', () => {
         this.carousel.scrollLeft += arrow.classList.contains('nav-slider__prev-button')
@@ -222,10 +201,6 @@ class NavSlider {
       this.carousel.scrollLeft = 0;
       this.imageWidthWithGap = this.slideImg.clientWidth + 30;
     });
-  }
-
-  init() {
-    this.addListeners();
   }
 }
 

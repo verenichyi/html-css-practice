@@ -87,9 +87,6 @@
   &__prev-button {
     transform: translate(-110%, 0);
   }
-
-  &__next-button {
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -108,7 +105,23 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .nav-slider {
+    position: relative;
+
+    &__prev-button,&__next-button {}
+
+    &__prev-button {
+      right: initial;
+      left: 0;
+      top: 50%;
+      transform: translate(-90px,-50%);
+    }
+
+    &__next-button {
+      right: 0;
+      top: 50%;
+      transform: translate(90px,-50%);
+    }
   }
 }
