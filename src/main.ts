@@ -109,3 +109,39 @@ window.addEventListener('resize', () => {
   generateCircles();
   addListenersToCircles();
 });
+
+class NavSlider {
+  carousel = document.querySelector('.nav-slider__carousel');
+
+  slideImg = this.carousel.querySelectorAll('img')[0];
+
+  imageWidthWithGap = this.slideImg.clientWidth + 30;
+
+  arrows = document.querySelectorAll('.nav-slider__nav-button');
+
+  onResize() {
+    window.addEventListener('resize', () => {
+      this.carousel.scrollLeft = 0;
+      this.imageWidthWithGap = this.slideImg.clientWidth + 30;
+    });
+  }
+
+  addListenersToButtons() {
+    this.arrows.forEach(arrow => {
+      arrow.addEventListener('click', () => {
+        this.carousel.scrollLeft += arrow.classList.contains('nav-slider__prev-button')
+          ? -this.imageWidthWithGap
+          : this.imageWidthWithGap;
+      });
+    });
+  }
+
+  init() {
+    this.onResize();
+    this.addListenersToButtons();
+  }
+}
+
+const navSlider = new NavSlider();
+
+navSlider.init();

@@ -1,10 +1,6 @@
 @import '../variables';
 
 .nav-slider {
-  &__wrapper {
-    position: relative;
-  }
-
   &__carousel {
     overflow: hidden;
     scroll-behavior: smooth;
@@ -66,6 +62,24 @@
     font-size: 16px;
     line-height: 22px;
   }
+
+  &__prev-button,
+  &__next-button {
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+  }
+
+  &__prev-button {
+    transform: translate(-110%, 0);
+  }
+
+  &__next-button {
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -86,6 +100,5 @@
 
 @media screen and (min-width: 1024px) {
   .nav-slider {
-
   }
 }
