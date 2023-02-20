@@ -4,13 +4,27 @@
   &__carousel {
     overflow: hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     display: flex;
     gap: 30px;
+
+    &_dragging {
+      cursor: grab;
+
+      & .nav-slider__item {
+        pointer-events: none;
+      }
+    }
   }
 
   &__item {
     flex-shrink: 0;
     width: 100%;
+    scroll-snap-align: start;
+
+    &:hover .nav-slider__card-title {
+      color: $primary-color;
+    }
   }
 
   &__link {
@@ -52,10 +66,6 @@
     line-height: 24px;
     font-weight: 700;
     transition: color 0.3s ease;
-
-    &:hover {
-      color: $primary-color;
-    }
   }
 
   &__card-description {
