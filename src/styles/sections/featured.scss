@@ -7,6 +7,10 @@
 .featured {
   padding: 32px 0 37px;
 
+  &__wrapper {
+    position: relative;
+  }
+
   span[data-type='festive'] {
     background-color: $festiv-back;
   }
@@ -130,6 +134,46 @@
       font-weight: 700;
     }
   }
+
+  &__all {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5px;
+    gap: 10px;
+    border: 2px solid $primary-color;
+    border-radius: 50px;
+    margin-top: 36px;
+    transition: color 0.3s ease, background 0.2s ease;
+
+    span {
+      color: $primary-color;
+      font-weight: 700;
+    }
+
+    svg {
+      width: 16px;
+      height: 13px;
+      fill: $primary-color;
+      stroke: $primary-color;
+    }
+
+    &:hover {
+      border: none;
+      padding: 22px 7px;
+      background: $primary-gradient;
+    }
+
+    &:hover svg {
+      fill: $white-color;
+      stroke: $white-color;
+    }
+
+    &:hover span {
+      color: $white-color;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -144,6 +188,31 @@
 
     &__item {
       @include width-item(30px, 2);
+    }
+
+    &__all {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: initial;
+      padding: 0;
+      margin: 0;
+      border-radius: 50px;
+      border: none;
+
+      &:hover {
+        padding: 0;
+        background: transparent;
+      }
+
+      &:hover svg {
+        fill: $primary-color;
+        stroke: $primary-color;
+      }
+
+      &:hover span {
+        color: $primary-color;
+      }
     }
   }
 }
