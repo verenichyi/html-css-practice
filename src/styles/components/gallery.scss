@@ -10,53 +10,16 @@
   }
 
   &__item {
-    &:nth-child(1) {
-      order: 1
-    }
-    &:nth-child(2) {
-      order: 2
-    }
-    &:nth-child(3) {
-      order: 3
-    }
-    &:nth-child(4) {
-      order: 4
-    }
-    &:nth-child(4) {
-      order: 4
-    }
-    &:nth-child(5) {
-      order: 5
-    }
-    &:nth-child(6) {
-      order: 6
-    }
-    &:nth-child(7) {
-      order: 7
-    }
-    &:nth-child(8) {
-      order: 8
-    }
-    &:nth-child(9) {
-      order: 9
-    }
-    &:nth-child(10) {
-      order: 10
-    }
-    &:nth-child(11) {
-      order: 11
-    }
-    &:nth-child(12) {
-      order: 12
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        order: $i
+      }
     }
 
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6),
-    &:nth-child(7) {
-      display: none;
+    @for $i from 2 through 7 {
+      &:nth-child(#{$i}) {
+        display: none;
+      }
     }
 
     &_big {
@@ -99,11 +62,10 @@
         order: 9
       }
 
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5){
-        display: block;
+      @for $i from 2 through 5 {
+        &:nth-child(#{$i}) {
+          display: block;
+        }
       }
     }
   }
