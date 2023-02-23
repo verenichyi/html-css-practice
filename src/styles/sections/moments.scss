@@ -1,0 +1,59 @@
+@import '../variables';
+@import '../components/gallery';
+
+.moments {
+  padding: 17px 0;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__reload {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &-button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    span {
+      color: $primary-text-color;
+    }
+  }
+
+  &__description {
+    color: $primary-text-color;
+    margin-bottom: 14px;
+  }
+
+  &__app-link {
+    color: $primary-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .moments {
+    padding: 28px 0 36px;
+
+    &__description {
+      margin-bottom: 18px;
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .moments {
+    padding: 50px 0;
+
+    &__description {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+}
