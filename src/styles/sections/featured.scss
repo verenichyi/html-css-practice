@@ -1,0 +1,232 @@
+@import '../variables';
+
+@mixin width-item($gap, $elsAmount) {
+  width: calc(calc(100% - (($elsAmount - 1) * $gap)) / $elsAmount);
+}
+
+.featured {
+  padding: 32px 0 37px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  span[data-type='festive'] {
+    background-color: $festiv-back;
+  }
+  span[data-type='tranquil'] {
+    background-color: $tranquil-back;
+  }
+  span[data-type='family'] {
+    background-color: $family-back;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+  }
+
+  &__card {
+    width: 100%;
+    position: relative;
+    color: $primary-text-color;
+    padding-bottom: 5px;
+  }
+
+  &__card-category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: $white-color;
+    border-radius: 6px 0 6px 0;
+  }
+
+  &__card-image {
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 18px;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-title {
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__pass-location-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__card-pass-type {
+    padding: 3px 10px;
+    color: $white-color;
+    background: $primary-gradient;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+
+  &__card-location {
+    font-size: 12px;
+  }
+
+  &__rating-price-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__card-rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__card-rating-icons {
+    position: relative;
+    white-space: nowrap;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: $primary-color;
+    }
+  }
+
+  &__card-rating-cover {
+    width: calc(100% - var(--rating));
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $white-color;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.7;
+  }
+
+  &__card-rating-amount {
+    font-size: 12px;
+    color: $primary-color;
+  }
+
+  &__card-price {
+    color: $primary-color;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__all {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5px;
+    gap: 10px;
+    border: 2px solid $primary-color;
+    border-radius: 50px;
+    margin-top: 36px;
+    transition: color 0.3s ease, background 0.2s ease;
+
+    span {
+      color: $primary-color;
+      font-weight: 700;
+    }
+
+    svg {
+      width: 16px;
+      height: 13px;
+      fill: $primary-color;
+      stroke: $primary-color;
+    }
+
+    &:hover {
+      border: none;
+      padding: 22px 7px;
+      background: $primary-gradient;
+    }
+
+    &:hover svg {
+      fill: $white-color;
+      stroke: $white-color;
+    }
+
+    &:hover span {
+      color: $white-color;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .featured {
+    padding: 40px 0 42px;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      @include width-item(30px, 2);
+    }
+
+    &__all {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: initial;
+      padding: 0;
+      margin: 0;
+      border-radius: 50px;
+      border: none;
+
+      &:hover {
+        padding: 0;
+        background: transparent;
+      }
+
+      &:hover svg {
+        fill: $primary-color;
+        stroke: $primary-color;
+      }
+
+      &:hover span {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .featured {
+    &__item {
+      @include width-item(30px, 4);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .featured {
+    padding: 50px 0 46px;
+  }
+}
