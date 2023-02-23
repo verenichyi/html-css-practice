@@ -7,20 +7,39 @@
 
   &__filter-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     padding: 15px 0;
   }
 
   &__filter-item {
-    &:not(:last-child) {
-      margin-right: 5px;
-    }
-
     flex-shrink: 0;
-    color: $primary-text-color;
+    color: $white-color;
     font-size: 16px;
     padding: 5px 15px;
-    background-color: $white-color;
-    border-radius: 50px;
     cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+
+    &_active {
+      opacity: 1;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search-from {
+    &__filter-item {
+      color: $primary-text-color;
+      background-color: $white-color;
+      border-radius: 50px;
+      opacity: 1;
+
+      &_active {
+        font-weight: 400;
+        color: $primary-color;
+      }
+    }
   }
 }

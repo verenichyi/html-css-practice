@@ -13,6 +13,7 @@
     <!--==================== HEADER START =======================-->
     <header class="header">
       <!--==================== INNER HEADER START =======================-->
+      <div class="background-container">
       <div class="header-container">
         <div class="header__inner">
           <a href="#" class="header__logo logo">
@@ -55,7 +56,7 @@
           <form action="#" class="header__search-form search-form">
             <div class="search-from__filter">
               <ul class="search-from__filter-list">
-                <li class="search-from__filter-item">All</li>
+                <li class="search-from__filter-item search-from__filter-item_active">All</li>
                 <li class="search-from__filter-item">Day Pass</li>
                 <li class="search-from__filter-item">Cabana</li>
                 <li class="search-from__filter-item">Spa pass</li>
@@ -91,13 +92,165 @@
           </form>
         </section>
       </div>
+      </div>
       <!--==================== HEADER MAIN SECTION END =======================-->
     </header>
     <!--==================== HEADER END =========================-->
     <section class="hotels">
-      <div class="hotels__slider slider"></div>
+      <div class="container">
+        <div class="hotels__slider slider">
+          <div class="slider__wrapper">
+            <div class="slider__carousel slider__carousel_dragging">
+              <img src="assets/images/hotels/1.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/2.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/3.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/4.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/5.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/6.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/7.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/8.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/1.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/2.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/3.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/4.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/5.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/6.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/7.png" alt="hotel-image" draggable="false" />
+              <img src="assets/images/hotels/8.png" alt="hotel-image" draggable="false" />
+            </div>
+            <div class="slider__pagination"></div>
+          </div>
+        </div>
+      </div>
     </section>
-    <!--==================== MOMENTS START =======================-->
+    <!--==================== WAYS TO DAYCATION START =======================-->
+    <section class="ways-to-daycation">
+      <div class="container">
+        <h2 class="ways-to-daycation__title section-title"><span>Ways</span> to daycation</h2>
+        <ul class="ways-to-daycation__grid-container">
+          <li class="ways-to-daycation__grid_item ways-to-daycation__most-popular">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__popular-card">
+                <div class="ways-to-daycation__popular-card-image">
+                  <img src="assets/images/ways-to-daycation/most-popular.jpg" alt="price-card" />
+                </div>
+                  <div class="ways-to-daycation__popular-card-content">
+                    <span class="ways-to-daycation__popular-card-tag">Most popular</span>
+                    <h3 class="ways-to-daycation__popular-card-title">Day passes</h3>
+                    <button class="ways-to-daycation__popular-card-button">From $15/guest</button>
+                  </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__cabanas">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/cabanas.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Cabanas</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$15</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__spa-passes">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/spa_passes.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Spa passes</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$25</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__daybeds">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/daybeds.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Daybeds</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$35</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__fitness">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/fitness.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Fitness Pass</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$29</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__beach">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/spa_passes.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Beach Day Passes</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$15</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__pool-beach">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/spa_passes.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Pool and Beach Day Passes</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$25</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__events">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__card">
+                <div class="ways-to-daycation__card-image">
+                  <img src="assets/images/ways-to-daycation/events.jpg" alt="price-card" />
+                </div>
+                <div class="ways-to-daycation__card-info">
+                  <h3 class="ways-to-daycation__card-name">Events</h3>
+                  <p class="ways-to-daycation__card-price">from <span>$19</span>/guest</p>
+                </div>
+              </article>
+            </a>
+          </li>
+          <li class="ways-to-daycation__grid_item ways-to-daycation__gold-pass">
+            <a href="#" class="ways-to-daycation__item-link">
+              <article class="ways-to-daycation__gold-card">
+                <span class="ways-to-daycation__gold-card-feature">
+                  <img src="assets/images/ways-to-daycation/arrow.png" alt="arrow-sign" />
+                </span>
+                <h3 class="ways-to-daycation__gold-card-title">Gold Pass</h3>
+                <p class="ways-to-daycation__gold-card-info">
+                  Special monthly premium subscription. Gives you unlimited use daypass.
+                </p>
+              </article>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--==================== WAYS TO DAYCATION END =======================-->
+<!--==================== MOMENTS START =======================-->
     <section class="moments">
       <div class="container">
         <div class="moments__wrapper">
@@ -229,5 +382,122 @@
       </div>
     </section>
     <!--==================== MOMENTS END =======================-->
+    <!--==================== FOOTER START =========================-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__description">
+          <div class="footer__description-item">
+            <h2 class="footer__title">Dayaxe</h2>
+            <ul class="footer__description-item-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">How It Works</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">About Us</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Press</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Help</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__description-item">
+            <h2 class="footer__title">Discover</h2>
+            <ul class="footer__description-item-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Gold Pass</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Gift Card</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Free Daycations</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Cities</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Resorts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__description-item">
+            <h2 class="footer__title">Partners</h2>
+            <ul class="footer__description-item-list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Why Dayaxe?</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Partner Login</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Partner Signup</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link">Refer Hotel</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__others">
+            <h2 class="footer__title">New resorts launched & special offers</h2>
+            <div class="footer__others-wrapper">
+              <div class="footer__offer">
+                <form action="#" class="footer__offer-form">
+                  <input class="footer__form-input" type="email" name="email" placeholder="Enter email..." />
+                  <button class="footer__form-button hover-button" type="submit">Sign Up</button>
+                </form>
+                <p class="footer__offer-description"><span>+15%</span> off promo</p>
+              </div>
+              <ul class="footer__contacts">
+                <li class="footer__contacts-item">
+                  <a href="#" class="footer__contacts-link">
+                    <img class="footer__contacts-icon" src="assets/images/footer/fb.png" alt="facebook-icon" />
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a href="#" class="footer__contacts-link">
+                    <img class="footer__contacts-icon" src="assets/images/footer/instagram.png" alt="instagram-icon" />
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a href="#" class="footer__contacts-link">
+                    <img class="footer__contacts-icon" src="assets/images/footer/vimeo.png" alt="vimeo-icon" />
+                  </a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a href="#" class="footer__contacts-link">
+                    <img class="footer__contacts-icon" src="assets/images/footer/in.png" alt="linkedin-icon" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__inner">
+        <div class="container">
+          <div class="footer__inner-wrapper">
+            <p class="footer__copyright">&copy; 2023 Dayaxe. All rights reserved.</p>
+            <ul class="footer__info">
+              <li class="footer__info-item">
+                <a href="#" class="footer__info-link">Terms</a>
+              </li>
+              <li class="footer__info-item">
+                <a href="#" class="footer__info-link">Privacy</a>
+              </li>
+              <li class="footer__info-item">
+                <a href="#" class="footer__info-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--==================== FOOTER END =========================-->
   </body>
 </html>

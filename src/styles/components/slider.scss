@@ -1,0 +1,79 @@
+@import '../variables';
+
+.slider {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__carousel {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+
+    img {
+      scroll-snap-align: center;
+      object-fit: cover;
+      height: 73px;
+      width: calc(100% / 3);
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    gap: 8px;
+  }
+
+  &__pagination-circle {
+    cursor: pointer;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid $grey;
+
+    &:hover,
+    &_active {
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .slider {
+    &__carousel {
+      img {
+        width: calc(100% / 5);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    &__carousel {
+      img {
+        width: calc(100% / 8);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1440px) {
+  .slider {
+    &__carousel {
+      img {
+        height: 141px;
+      }
+    }
+  }
+}
