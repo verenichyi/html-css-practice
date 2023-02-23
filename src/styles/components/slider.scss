@@ -10,8 +10,10 @@
     font-size: 0;
     overflow: hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
 
     img {
+      scroll-snap-align: center;
       object-fit: cover;
       height: 73px;
       width: calc(100% / 3);
@@ -47,16 +49,6 @@
   .slider {
     &__carousel {
       img {
-        width: calc(100% / 4);
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .slider {
-    &__carousel {
-      img {
         width: calc(100% / 5);
       }
     }
@@ -74,7 +66,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-
 }
 
 @media screen and (min-width: 1440px) {
