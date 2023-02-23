@@ -1,6 +1,7 @@
 @import '../variables';
 
 .how-it-works {
+  background: $how-it-works-background;
   padding: 37px 0 17px;
 
   &__list {

@@ -224,6 +224,7 @@
 
 @media screen and (min-width: 768px) {
   .ways-to-daycation {
+    background: $ways-to-daycation-background;
     padding: 40px 0;
 
     &__grid-container {
