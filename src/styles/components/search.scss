@@ -40,12 +40,14 @@
     font-size: 16px;
     padding: 20px 5px;
     cursor: pointer;
+    box-shadow: 0 8px 20px rgb(30 182 255 / 24%);
 
     &:hover {
       border: 2px solid $primary-color;
       padding: 18px 5px;
       background: transparent;
       color: $primary-color;
+      box-shadow: none;
     }
   }
 }

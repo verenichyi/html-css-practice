@@ -1,5 +1,4 @@
 import './styles.scss';
-import { runInNewContext } from 'vm';
 
 // MENU
 const menuButton = document.querySelector('.menu__button');
@@ -214,3 +213,22 @@ class NavSlider {
 const navSlider = new NavSlider();
 
 navSlider.init();
+
+// scrollToTopButton
+const scrollToTopButton = document.querySelector('.scrollToTopButton');
+
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+});
+
+window.addEventListener('scroll', () => {
+  scrollToTopButton.classList.remove('scrollToTopButton_active');
+
+  if (window.scrollY > 300) {
+    scrollToTopButton.classList.add('scrollToTopButton_active');
+  }
+});
