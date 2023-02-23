@@ -21,6 +21,17 @@ body {
   margin: 0 auto;
 }
 
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: $primary-text-color;
+  margin-bottom: 15px;
+
+  & span {
+    color: $primary-color;
+  }
+}
+
 .container,
 .header-container {
   padding: 0 24px;
