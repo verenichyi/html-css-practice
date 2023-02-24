@@ -1,6 +1,7 @@
 @import '../variables';
 
 .how-it-works {
+  background: $how-it-works-background;
   padding: 37px 0 17px;
 
   &__list {
@@ -51,16 +52,18 @@
   }
 
   &__second-card button,
-  &__third-card button{
+  &__third-card button {
     background: transparent;
     border: 2px solid $primary-color;
     color: $primary-color;
+    box-shadow: none;
 
     &:hover {
       color: $white-color;
       background: $primary-gradient;
       border: none;
       padding: 18px 24px;
+      box-shadow: 0 8px 20px rgb(30 182 255 / 24%);
     }
   }
 
